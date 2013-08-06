@@ -10,5 +10,8 @@
     "type": "git",
     "url": "git://github.com/alexbirkett/ten20location.io.git"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+   "dependencies": {
+     "location.io": "0.0.x"
+   }
 }
