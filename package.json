@@ -1,0 +1,14 @@
+{
+  "name": "ten20location.io",
+  "version": "0.0.0",
+  "description": "ten20 Location.IO adapter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexbirkett/ten20location.io.git"
+  },
+  "readmeFilename": "README.md"
+}
