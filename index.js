@@ -30,7 +30,6 @@ var argv = optimist.usage('Usage: $0  --dbname [string] --port [num]').
     default('r', '1337')
     .argv;
 
-
 locationIo.on('tracker-connected', function(trackerId, protocolName) {
     console.log('new connection ' + trackerId + ' using protocol ' + protocolName);
 });
@@ -82,7 +81,12 @@ var createTracker = function(trackerId) {
 
 locationIo.on('message', function(trackerId, message) {
     console.log('message from ' + trackerId);
+    console.log(message);
     updateMessage(trackerId, message, function(error, response, body) {
+        console.log('message sent ' + error);
+        if (response) {
+            console.log('status ' + response.statusCode);
+        }
         if (response.statusCode === 404) {
             addTracker(createTracker(trackerId), function(err) {
                 console.log('tracker added ' + err);
@@ -102,10 +106,4 @@ locationIo.createServer(argv.port);
 
 signIn(function(err, response, body) {
     console.log('signin ' + err);
-
-
-/*    addTracker(createTracker('123456'), function(err) {
-        console.log('tracker added ' + err);
-    });*/
-
 });
