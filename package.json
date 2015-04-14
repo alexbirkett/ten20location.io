@@ -11,9 +11,9 @@
     "url": "git://github.com/alexbirkett/ten20location.io.git"
   },
   "readmeFilename": "README.md",
-   "dependencies": {
-     "location.io": "0.0.x",
-     "request": "2.27.x",
-     "optimist": "0.6.0"
-   }
+  "dependencies": {
+    "location.io": "0.0.4",
+    "request": "^2.55.0",
+    "optimist": "^0.6.1"
+  }
 }
